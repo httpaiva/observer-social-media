@@ -1,5 +1,5 @@
-import Video from "../classes/video";
+import { Post } from "../classes/post";
 
 export default interface IObserver {
-  update(video: Video): void;
+  update(post: Post): void;
 }

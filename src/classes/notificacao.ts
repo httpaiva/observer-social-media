@@ -1,11 +1,11 @@
 import ISubject from "../interfaces/isubject";
 import IObserver from "../interfaces/iobserver";
-import Video from "./video";
+import { Post } from "./post";
 
 export default class Notificacao implements ISubject {
   private observers: IObserver[] = [];
 
-  constructor(public readonly video: Video) {}
+  constructor(public readonly post: Post) {}
 
   subscribe(inscrito: IObserver): void {
     this.observers.push(inscrito);
@@ -23,7 +23,7 @@ export default class Notificacao implements ISubject {
   }
 
   notify(sub: IObserver): void {
-    sub.update(this.video);
+    sub.update(this.post);
   }
 
   notifyAll(): void {

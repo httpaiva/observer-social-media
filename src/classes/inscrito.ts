@@ -1,13 +1,13 @@
 import IObserver from "../interfaces/iobserver";
 
-import Video from "./video";
+import { Post } from "./post";
 
 export default class Inscrito implements IObserver {
   constructor(public readonly id: number, public readonly nome: string) {}
 
-  update(video: Video): void {
+  update(post: Post): void {
     console.log(
-      `O inscrito ${this.nome} foi notificado sobre o vídeo ${video.titulo}`
+      `O inscrito ${this.nome} foi notificado sobre o post ${post.conteudo}`
     );
   }
 }

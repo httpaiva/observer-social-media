@@ -1,10 +1,10 @@
-import Video from "./classes/video";
+import { Post } from "./classes/post";
 import Inscrito from "./classes/inscrito";
 import Notificacao from "./classes/notificacao";
 
-const video = new Video("1", "Vídeo 1", "thumbnail-1.jpg", "www.video1.com");
+const post = new Post("1", "Comentario polemico", "www.orkut.com/1");
 
-const notificacao = new Notificacao(video);
+const notificacao = new Notificacao(post);
 
 // Inscritos:
 const inscrito1 = new Inscrito(1, "Bram Stoker");
@@ -15,11 +15,13 @@ notificacao.subscribe(inscrito1);
 notificacao.subscribe(inscrito2);
 notificacao.subscribe(inscrito3);
 
-console.log("---------- Notificando todos os inscritos: ----------");
+console.log("\n---------- Notificando todos os inscritos: ----------");
 notificacao.notifyAll();
 
-console.log("---------- Desinscrevendo Bram Stoker: ----------");
+console.log("\n---------- Desinscrevendo Bram Stoker: ----------");
 notificacao.unsubscribe(inscrito1);
 
-console.log("---------- Notificando todos os inscritos novamente: ----------");
+console.log(
+  "\n---------- Notificando todos os inscritos novamente: ----------"
+);
 notificacao.notifyAll();
