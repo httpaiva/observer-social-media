@@ -9,6 +9,8 @@ Neste exemplo, existem duas classes importantes:
 
 No `index.ts`, há a interação entre as duas classes. Use o comando `npm start` para executar o projeto.
 
+![Projeto rodando](./static/running.png)
+
 ## Diagrama de Classes:
 
 ![Diagrama de Classes](./static/observer-pattern.jpg)
